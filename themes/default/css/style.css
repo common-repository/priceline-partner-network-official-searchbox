@@ -1,0 +1,534 @@
+.widget_rs_searchbox,
+.well {
+    overflow: visible !important;
+}
+.rs_cal *,
+.rs_cal *:before,
+.rs_cal *:after {
+    box-sizing: content-box;
+}
+.rs_cal {
+    background-color: #fff;
+    border: 1px solid #8b8b8b;
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    z-index: 9999;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    background: #fff;
+    overflow: visible;
+}
+.rs_cal .rs_cal_box {
+    display: inline-block;
+}
+.rs_cal .rs_calTop {
+    text-align: center;
+    background-color: #0a85c1;
+    color: #fff;
+    font-size: 16px;
+    text-shadow: 0 1px rgba(0,0,0,0.5);
+    position: relative;
+    padding: 5px 0;
+    height: 35px;
+    line-height: 35px;
+    display: block;
+}
+.rs_cal .rs_calTop .rs_cal_previous_month {
+    position: absolute;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 8px 10px 12px 0;
+    left: 5px;
+    top: 0;
+    line-height: 24px;
+    display: block;
+}
+.rs_cal .rs_calTop .rs_cal_next_month {
+    position: absolute;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 8px 0px 12px 10px;
+    right: 5px;
+    line-height: 24px;
+    top: 0;
+    display: block;
+}
+.rs_cal .rs_topRow {
+    background-color: #e6e6e6;
+    font-weight: bold;
+}
+.rs_cal table {
+    width: 300px;
+    height: 300px;
+    color: rgb(51, 51, 51);
+    border-collapse: collapse;
+    margin: 0;
+}
+.rs_cal .rs_topRow td {
+    background-image: -webkit-linear-gradient(top,#eaeaea,#e5e5e5 60%,#d9d9d9);
+    background-image: -moz-linear-gradient(top,#eaeaea,#e5e5e5 60%,#d9d9d9);
+    background-image: -o-linear-gradient(top,#eaeaea,#e5e5e5 60%,#d9d9d9);
+    background-image: linear-gradient(to bottom,#eaeaea,#e5e5e5 60%,#d9d9d9);
+    -webkit-box-shadow: inset 1px 1px rgba(255,255,255,0.5);
+    box-shadow: inset 1px 1px rgba(255,255,255,0.5);
+    width: 14.28571428571429%;
+}
+.rs_cal td {
+    text-align: center;
+    border: 1px solid #d7d7d7;
+    text-shadow: 0 1px rgba(0,0,0,0.2);
+    vertical-align: middle;
+}
+.rs_cal .rs_cal_day:hover {
+    background-color: #999999;
+    color: #fff;
+    -webkit-box-shadow: inset 2px 2px 2px rgba(0,0,0,0.3);
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.rs_cal .rs_setDate {
+    background-color: #0a85c1;
+    color: #fff;
+    -webkit-box-shadow: inset 2px 2px 2px rgba(0,0,0,0.3);
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.3);
+}
+.rs_cal .rs_disabledDate {
+    color: #9c9c9c;
+}
+.rs_cal .rs_betweenDate {
+    background-color: #e6e6e6;
+    -webkit-box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+}
+.rs_cal .rs_calClose {
+    text-align: center;
+    color: #0a85c1;
+    font-weight: bold;
+    height: 11.1111111111%;
+}
+.rs_cal .rs_calClose:hover {
+    background-color: #d6d6d6;
+    cursor: pointer;
+}
+.rs_cal .rs_cal_arrow {
+    position: relative;
+    right: auto;
+    left: auto;
+}
+.rs_suggest {
+    position: absolute;
+    display: none;
+    width: 430px;
+    z-index: 9999;
+}
+.rs_suggest .rs_suggest_absolute {
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 6;
+    zoom: 1;
+    border-top: 1px solid #ccc;
+    color: rgb(51, 51, 51);
+}
+.rs_suggest .rs_suggest_show {
+    background: #fff;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.rs_suggest .rs_suggest_show a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: #0a85c1;
+}
+.rs_suggest .rs_suggest_show a:hover {
+    color: #E01B5D;
+}
+.rs_suggest .rs_suggest_active, .rs_suggest .rs_suggest_show:hover {
+    background: #f0f0f0;
+    color: #0a85c1;
+}
+.rs_suggest ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.rs_suggest li {
+    border-right: 1px solid #ccc !important;
+    border-left: 1px solid #ccc !important;
+    border-bottom: 1px solid #ccc !important;
+    padding: 8px !important;
+    margin: 0 !important;
+    cursor: pointer;
+    position: relative;
+    font-size: 14px !important;
+    list-style: none !important;
+}
+.rs_suggest .rs_suggest_left {
+    width: 60%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+.rs_suggest .rs_suggest_left i {
+    margin-right: 3px;
+}
+.rs_suggest .rs_suggest_right {
+    width: 40%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    line-height: normal;
+    font-weight: bold;
+}
+.rs_suggest .rs_suggest_full {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    width: 100%;
+}
+.rs_suggest .rs_suggest_subhead {
+    display: inline-block;
+    text-align: center;
+}
+.rs_suggest .rs_suggest_city_name {
+    color: #333333;
+    display: none;
+    font-size: 14px;
+}
+.rs_suggest .rs_suggest_active .rs_suggest_city_name {
+    display: none;
+}
+.rs_suggest .rs_sub_count {
+    display: inline-block;
+}
+.rs_suggest .rs_suggest_air .rs_suggest_active .rs_suggest_city_name {
+    display: block;
+}
+.rs_suggest .rs_suggest_hotel .rs_suggest_active .rs_suggest_city_name {
+    display: block;
+}
+.rs_suggest .rs_suggest_poi .rs_suggest_active .rs_suggest_city_name {
+    display: block;
+}
+.rs_suggest .rs_icon {
+    width: 15px;
+    height: 13px;
+    margin-right: 5px;
+    background: url("../images/icons.png");
+    display: inline-block;
+}
+.rs_suggest .icon_city {
+    background-position: 60px 0px;
+}
+.rs_suggest .icon_region {
+    background-position: 30px 0px;
+}
+.rs_suggest .icon_airport {
+    background-position: 15px 0px;
+}
+.rs_suggest .icon_poi {
+    background-position: 0px 0px;
+}
+.rs_suggest .icon_hotel {
+    background-position: 45px 0px;
+}
+.rs_suggest .rs_suggest_active .icon_city {
+    background-position: 60px 13px;
+}
+.rs_suggest .rs_suggest_active .icon_region {
+    background-position: 30px 13px;
+}
+.rs_suggest .rs_suggest_active .icon_airport {
+    background-position: 15px 13px;
+}
+.rs_suggest .rs_suggest_active .icon_poi {
+    background-position: 0px 13px;
+}
+.rs_suggest .rs_suggest_active .icon_hotel {
+    background-position: 45px 13px;
+}
+.sb_searchformMain {
+    color: #333;
+    background: #f0f0f0;
+    padding: 10px;
+    position: relative;
+    font-size: 13px !important;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif !important;
+    vertical-align: middle;
+}
+.sb_searchformMain input,
+.sb_searchformMain select {
+    font-size: 12px !important;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif !important;
+    vertical-align: middle;
+}
+.sb_searchformToggle {
+    margin: 0 0 10px !important;
+    padding: 0;
+    list-style: none !important;
+    font-size: 14px !important;
+    font-weight: normal;
+}
+.sb_searchformToggle__item {
+    float: left;
+    margin: 0 1.84%;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out 0s;
+    text-align: center;
+}
+.sb_searchformToggle__item_highlight {
+    color: #047dba;
+}
+.sb_searchformToggle__airItem {
+    float: left;
+    margin: 0 3px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out 0s;
+    font-size: 13px !important;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif !important;
+}
+.sb_searchformToggle__airItem label, .sb_searchformRadio {
+    cursor: pointer;
+}
+.sb_searchformProductIcon {
+    display: block;
+    height: 23px;
+    transition: all 0.2s ease-in-out 0s;
+    background-image: url(../images/products.png);
+    background-repeat: no-repeat;
+    margin: 0 auto 4px auto;
+}
+.sb_hideRadio {
+    display: none;
+}
+.sb_searchformHotelIcon {
+    width: 21px;
+    background-position: -0px -0px;
+}
+.sb_searchformAirIcon {
+    width: 21px;
+    background-position: -26px -0px;
+}
+.sb_searchformVPIcon {
+    width: 25px;
+    background-position: -52px -0px;
+}
+.sb_searchformCarIcon {
+    width: 25px;
+    background-position: -83px -0px;
+}
+.sb_searchformToggle__item_highlight .sb_searchformProductIcon {
+    background-image: url(../images/products_highlight.png);
+}
+.sb_searchFormToggle__label {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif !important;
+    font-size: 13px !important;
+}
+.sb_searchformClear:before, .sb_searchformClear:after {
+    content: " ";
+    display: table;
+}
+.sb_searchformClear:after {
+    clear: both;
+}
+.sb_searchformClear {
+    *zoom: 1;
+    clear: both;
+}
+.sb_searchformRow {
+    margin-bottom: 10px;
+}
+.sb_searchformTextInput, .sb_searchformSelect {
+    width: 100%;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    margin: 0;
+    font-size: 12px;
+}
+.rs_chk_in, .rs_chk_out, .rooms, .adults, .rs_adults_input, .rs_child_input, .rs_adults, .rs_children, .rs_cabin {
+    cursor: pointer;
+}
+.sb_searchformInputContainer {
+    position: relative;
+}
+.sb_searchformCal {
+    position: absolute;
+    right: 5px;
+    top: 6px;
+}
+.sb_searchformRow--half, .sb_searchformRow--half--last {
+    float: left;
+    width: 48%;
+}
+.sb_searchformRow--half--last, .sb_searchformRow--thirdSpecial--middle, .sb_searchformRow--thirdSpecial--last {
+    margin-left: 4%;
+}
+.sb_searchformRow--third, .sb_searchformRow--third--middle, .sb_searchformRow--third--last {
+    float: left;
+    width: 30.6%;
+}
+.sb_searchformRow--third--middle, .sb_searchformRow--third--last {
+    margin-left: 4.1%;
+}
+.sb_searchformRow--thirdSpecial {
+    float: left;
+    width: 38%;
+}
+.sb_searchformRow--thirdSpecial--middle {
+    float: left;
+    width: 22%;
+}
+.sb_searchformRow--thirdSpecial--last {
+    float: left;
+    width: 32%;
+}
+.sb_searchformButton,
+.sb_searchformButton:active,
+.sb_searchformButton:visited {
+    text-shadow: none;
+    position: relative;
+    width: auto;
+    height: 50px;
+    color: #FFF;
+    text-align: center;
+    background-repeat: repeat-x;
+    background-position: center center;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    -o-transition: background 99ms ease-in;
+    -moz-transition: background 99ms ease-in;
+    -webkit-transition: background 99ms ease-in;
+    transition: background 99ms ease-in;
+    font-weight: 600;
+    background: #047dba;
+    background: -moz-linear-gradient(top, #047dba 0%, #04689b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#047dba), color-stop(100%,#04689b));
+    background: -webkit-linear-gradient(top, #047dba 0%,#04689b 100%);
+    background: -o-linear-gradient(top, #047dba 0%,#04689b 100%);
+    background: -ms-linear-gradient(top, #047dba 0%,#04689b 100%);
+    background: linear-gradient(to bottom, #047dba 0%,#04689b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#047dba', endColorstr='#04689b',GradientType=0);
+    border: 1px solid #04689b;
+    font-size: 20px;
+    float: right;
+    padding: 0 40px 0 10px !important;
+    margin: 0 !important;
+}
+.sb_searchformButton:hover, .sb_multiToggleIcon:hover {
+    background: #04385d;
+    background: -moz-linear-gradient(top, #04385d 0%, #04406a 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#04385d), color-stop(100%,#04406a));
+    background: -webkit-linear-gradient(top, #04385d 0%,#04406a 100%);
+    background: -o-linear-gradient(top, #04385d 0%,#04406a 100%);
+    background: -ms-linear-gradient(top, #04385d 0%,#04406a 100%);
+    background: linear-gradient(to bottom, #04385d 0%,#04406a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#047dba', endColorstr='#04689b',GradientType=0);
+    border-color: #172b3f;
+}
+.sb_searchformIcon {
+    position: absolute;
+    right: 5px;
+    top: 25%;
+    box-shadow: none !important;
+    border-radius: 0px !important;
+}
+.childrens_ages span {
+    margin-right: 5px;
+}
+.childrens_ages .childrens_ages {
+    width: auto;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px 5px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    margin: 0 5px 5px 0px;
+}
+.sb_searchform__flightNumber, .sb_multiToggleIcon {
+    border-radius: 3px;
+    border: 1px solid #C0BCBC;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    padding: 4px 7px;
+    background: #CCC;
+    font-weight: bold;
+}
+.sb_multiToggleIcon {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding: 0;
+    line-height: 22px;
+    margin-right: 8px;
+    cursor: pointer;
+    background: #047dba;
+    background: -moz-linear-gradient(top, #047dba 0%, #04689b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#047dba), color-stop(100%,#04689b));
+    background: -webkit-linear-gradient(top, #047dba 0%,#04689b 100%);
+    background: -o-linear-gradient(top, #047dba 0%,#04689b 100%);
+    background: -ms-linear-gradient(top, #047dba 0%,#04689b 100%);
+    background: linear-gradient(to bottom, #047dba 0%,#04689b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#047dba', endColorstr='#04689b',GradientType=0);
+    border: 1px solid #04689b;
+    -o-transition: background 99ms ease-in;
+    -moz-transition: background 99ms ease-in;
+    -webkit-transition: background 99ms ease-in;
+    transition: background 99ms ease-in;
+    color: #fff;
+}
+.sb_display_none, .sb_searchformCarDiff {
+    display: none;
+}
+.sb_searchformCheckbox__label {
+    cursor: pointer;
+    transition: all 0.2s ease-in-out 0s;
+}
+.sb_clear--left {
+    clear: left;
+}
+.site{
+    overflow: visible !important;
+}

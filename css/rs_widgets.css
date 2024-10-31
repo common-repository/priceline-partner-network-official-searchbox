@@ -1,0 +1,50 @@
+.rs_widget_settings .rs_option_box {
+    display: inline-block;
+    width: 20%;
+}
+
+.rs_widget_settings .rs_option_box--med {
+    display: inline-block;
+    width: 50%;
+}
+
+.rs_widget_settings .rs_option_box--med label {
+    margin-right: 10px;
+}
+
+.rs_widget_settings .rs_input--small {
+    width: 70px;
+}
+
+.rs_widget_settings h4 {
+    cursor: pointer;
+    position: relative;
+}
+
+.rs_widget_settings .rs_hotel_settings,
+.rs_widget_settings .rs_car_settings,
+.rs_widget_settings .rs_air_settings,
+.rs_widget_settings .rs_vp_settings {
+    border-bottom: 1px solid #A0A0A0;
+}
+
+.rs_widget_settings .arrow_down {
+    right: 0;
+    top: 0;
+    content: '\f140';
+    /* border: none; */
+    /* background: 0 0; */
+    font: 400 20px/1 dashicons;
+    /* speak: none; */
+    display: block;
+    /* padding: 0; */
+    /* text-indent: 0; */
+    /* text-align: center; */
+    /* position: relative; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* text-decoration: none!important; */
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
